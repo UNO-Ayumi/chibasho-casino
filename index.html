@@ -1557,43 +1557,9 @@ const RANK_KEYS = {
   blackjack: 'bunkasai_rank_blackjack'
 };
 
-/** images/ 内の ChatGPT 画像（生成時刻順）をキャラ一覧順に対応 */
-const CHARACTER_IMAGE_FILES = [
-  'ChatGPT Image 2026年5月31日 13_55_57.png',
-  'ChatGPT Image 2026年5月31日 13_58_57.png',
-  'ChatGPT Image 2026年5月31日 14_00_24.png',
-  'ChatGPT Image 2026年5月31日 14_06_40.png',
-  'ChatGPT Image 2026年5月31日 14_08_35.png',
-  'ChatGPT Image 2026年5月31日 14_09_49.png',
-  'ChatGPT Image 2026年5月31日 14_10_52.png',
-  'ChatGPT Image 2026年5月31日 14_12_21.png',
-  'ChatGPT Image 2026年5月31日 14_13_44.png',
-  'ChatGPT Image 2026年5月31日 14_16_09.png',
-  'ChatGPT Image 2026年5月31日 14_17_25.png',
-  'ChatGPT Image 2026年5月31日 14_19_14.png',
-  'ChatGPT Image 2026年5月31日 14_20_53.png',
-  'ChatGPT Image 2026年5月31日 14_22_26.png',
-  'ChatGPT Image 2026年5月31日 14_23_10.png',
-  'ChatGPT Image 2026年5月31日 14_24_48.png',
-  'ChatGPT Image 2026年5月31日 14_25_51.png',
-  'ChatGPT Image 2026年5月31日 14_26_59.png',
-  'ChatGPT Image 2026年5月31日 14_28_18.png',
-  'ChatGPT Image 2026年5月31日 14_29_41.png'
-];
-
-const PLAYER_CHARACTER_META = [
-  { id: 'cat', name: '猫' }, { id: 'dog', name: '犬' }, { id: 'panda', name: 'パンダ' },
-  { id: 'lion', name: 'ライオン' }, { id: 'tiger', name: 'トラ' }, { id: 'fox', name: 'キツネ' },
-  { id: 'koala', name: 'コアラ' }, { id: 'frog', name: 'カエル' }, { id: 'penguin', name: 'ペンギン' },
-  { id: 'unicorn', name: 'ユニコーン' }, { id: 'dragon', name: 'ドラゴン' }, { id: 'butterfly', name: 'バタフライ' },
-  { id: 'wolf', name: 'オオカミ' }, { id: 'tanuki', name: 'タヌキ' }, { id: 'bear', name: 'クマ' },
-  { id: 'trex', name: 'ティラノ' }, { id: 'dolphin', name: 'イルカ' }, { id: 'eagle', name: 'ワシ' },
-  { id: 'octopus', name: 'タコ' }, { id: 'giraffe', name: 'キリン' }
-];
-
-const PLAYER_CHARACTERS = PLAYER_CHARACTER_META.map((ch, i) => ({
+const PLAYER_CHARACTERS = PLAYER_CHARACTER_META.map((ch) => ({
   ...ch,
-  img: 'images/' + CHARACTER_IMAGE_FILES[i]
+  img: 'images/' + ch.id + '.png'
 }));
 
 function characterImgSrc(path) {
