@@ -1557,6 +1557,16 @@ const RANK_KEYS = {
   blackjack: 'bunkasai_rank_blackjack'
 };
 
+const PLAYER_CHARACTER_META = [
+  { id: 'cat', name: '猫' }, { id: 'dog', name: '犬' }, { id: 'panda', name: 'パンダ' },
+  { id: 'lion', name: 'ライオン' }, { id: 'tiger', name: 'トラ' }, { id: 'fox', name: 'キツネ' },
+  { id: 'koala', name: 'コアラ' }, { id: 'frog', name: 'カエル' }, { id: 'penguin', name: 'ペンギン' },
+  { id: 'unicorn', name: 'ユニコーン' }, { id: 'dragon', name: 'ドラゴン' }, { id: 'butterfly', name: 'バタフライ' },
+  { id: 'wolf', name: 'オオカミ' }, { id: 'tanuki', name: 'タヌキ' }, { id: 'bear', name: 'クマ' },
+  { id: 'trex', name: 'ティラノ' }, { id: 'dolphin', name: 'イルカ' }, { id: 'eagle', name: 'ワシ' },
+  { id: 'octopus', name: 'タコ' }, { id: 'giraffe', name: 'キリン' }
+];
+
 const PLAYER_CHARACTERS = PLAYER_CHARACTER_META.map((ch) => ({
   ...ch,
   img: 'images/' + ch.id + '.png'
